@@ -1,3 +1,5 @@
+// Java Exact Change
+
 // import java.util.Scanner; 
 
 // public class LabProgram {
@@ -60,29 +62,64 @@
 //    }
 // }
 
-// 3.15 LAB: Warm up: Text message abbreviation decoder
-import java.util.Scanner;
+// // 3.15 LAB: Warm up: Text message abbreviation decoder
+// import java.util.Scanner;
 
-public class TextMsgAbbreviation {
+// public class TextMsgAbbreviation {
+//    public static void main(String[] args) {
+//       Scanner scnr = new Scanner(System.in);
+//       String userInput;
+
+//       System.out.println("Input an abbreviation:");
+//       userInput = scnr.nextLine();
+
+//       if (userInput.equals("LOL")){
+//          System.out.println("laughing out loud");
+//       } else if (userInput.equals("IDK")){
+//          System.out.println("I don't know");
+//       } else if (userInput.equals("BFF")){
+//          System.out.println("best friends forever");
+//       } else if (userInput.equals("IMHO")){
+//          System.out.println("in my humble opinion");
+//       } else if (userInput.equals("TMI")){
+//          System.out.println("too much information");
+//       } else {
+//          System.out.println("Unknown");
+//       }
+//    }
+// }
+
+// 3.17 LAB: Seasons
+import java.util.Scanner; 
+
+// Change this below to make it compile right
+public class LabProgram {
    public static void main(String[] args) {
-      Scanner scnr = new Scanner(System.in);
-      String userInput;
+      Scanner scnr = new Scanner(System.in); 
+      String inputMonth;
+      int inputDay;
+      
+      inputMonth = scnr.next();
+      inputDay = scnr.nextInt();
 
-      System.out.println("Input an abbreviation:");
-      userInput = scnr.nextLine();
+      // inputDay = Integer.parseInt(inputStringDay);
+      // System.out.println(inputMonth + " " + inputDay);
 
-      if (userInput.equals("LOL")){
-         System.out.println("laughing out loud");
-      } else if (userInput.equals("IDK")){
-         System.out.println("I don't know");
-      } else if (userInput.equals("BFF")){
-         System.out.println("best friends forever");
-      } else if (userInput.equals("IMHO")){
-         System.out.println("in my humble opinion");
-      } else if (userInput.equals("TMI")){
-         System.out.println("too much information");
-      } else {
-         System.out.println("Unknown");
+      // Checks if valid
+      if ((inputMonth.equals("January") || inputMonth.equals("Feburary") || inputMonth.equals("March") || inputMonth.equals("April") || inputMonth.equals("May") || inputMonth.equals("June") || inputMonth.equals("July") || inputMonth.equals("August") || (inputMonth.equals("September") && (inputDay <= 30)) || inputMonth.equals("October") || inputMonth.equals("November") || inputMonth.equals("December")) && ((inputDay > 0) && (inputDay <= 31))){
+         
+         if ((inputMonth.equals("March") && inputDay >= 20) || inputMonth.equals("April") || inputMonth.equals("May") || (inputMonth.equals("June") && inputDay <= 20)){
+            System.out.println("Spring");
+         } else if ((inputMonth.equals("June") && inputDay >= 21) || inputMonth.equals("July") || inputMonth.equals("August") || (inputMonth.equals("September") && inputDay <= 21)){
+            System.out.println("Summer");
+         } else if ((inputMonth.equals("September") && inputDay >= 22) || inputMonth.equals("October") || inputMonth.equals("November") || (inputMonth.equals("December") && inputDay <= 20)){
+            System.out.println("Autumn");
+         } else if ((inputMonth.equals("December") && inputDay >= 21) || inputMonth.equals("January") || inputMonth.equals("Feburary") || (inputMonth.equals("March") && inputDay <= 19)){
+            System.out.println("Winter");
+         }
+      } 
+      else {
+         System.out.println("Invalid");
       }
    }
 }
