@@ -175,31 +175,56 @@
 // }
 
 // whats the score?
-import java.util.Scanner;
+// import java.util.Scanner;
 
-public class LabProgram {
-   public static void main(String[] args) {
-      Scanner scnr = new Scanner(System.in);
-      int numStrokes;
-      int isPar;
+// public class LabProgram {
+//    public static void main(String[] args) {
+//       Scanner scnr = new Scanner(System.in);
+//       int numStrokes;
+//       int isPar;
 
-      isPar = scnr.nextInt();
-      numStrokes = scnr.nextInt();
+//       isPar = scnr.nextInt();
+//       numStrokes = scnr.nextInt();
 
-      if (isPar == 5 || isPar == 4 || isPar == 3){
-         if (numStrokes == isPar - 2){
-            System.out.println("Eagle");
-         } else if (numStrokes == isPar - 1){
-            System.out.println("Birdie");
-         } else if (numStrokes == isPar){
-            System.out.println("Par");  
-         } else if (numStrokes == isPar + 1){
-            System.out.println("Boogie");  
-         } else {
-            System.out.println("Far too many, son");  
-         }
-      } else {
-         System.out.println("Error");
-      }
-   }
-}
+//       if (isPar == 5 || isPar == 4 || isPar == 3){
+//          if (numStrokes == isPar - 2){
+//             System.out.println("Eagle");
+//          } else if (numStrokes == isPar - 1){
+//             System.out.println("Birdie");
+//          } else if (numStrokes == isPar){
+//             System.out.println("Par");  
+//          } else if (numStrokes == isPar + 1){
+//             System.out.println("Boogie");  
+//          } else {
+//             System.out.println("Far too many, son");  
+//          }
+//       } else {
+//          System.out.println("Error");
+//       }
+//    }
+// }
+
+// leap year assignment Java
+
+// import java.util.Scanner;
+
+// public class LabProgram {
+//    public static void main(String[] args) {
+//       Scanner scnr = new Scanner(System.in);
+//       int inputYear = scnr.nextInt();
+
+//       if(inputYear % 100 != 0){
+//          if (inputYear % 4 == 0){
+//             System.out.println(inputYear + " - " + "leap year");
+//          } else {
+//             System.out.println(inputYear + " - " + "not a leap year");
+//          }
+//       } else {
+//          if(inputYear % 400 == 0) {
+//             System.out.println(inputYear + " - " + "leap year");
+//          } else {
+//             System.out.println(inputYear + " - " + "not a leap year");
+//          }
+//       }
+//    }
+// }
