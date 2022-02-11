@@ -148,28 +148,58 @@
 //    } 
 // }
 
+// import java.util.Scanner;
+
+// public class ConvertToGreek {
+//    public static void main (String [] args) {
+//       Scanner scnr = new Scanner(System.in);
+//       char origLetter;
+
+//       origLetter = scnr.next().charAt(0);
+
+//     //    System.out.println(origLetter);
+//        switch (origLetter){
+//          case 'A':
+//          case 'a':
+//             System.out.println("Alpha");
+//             break;
+//          case 'B':
+//          case 'b':
+//             System.out.println("Beta");
+//             break;
+//          default:
+//          System.out.println("Unknown");
+//             break;
+//       }
+//    }
+// }
+
+// whats the score?
 import java.util.Scanner;
 
-public class ConvertToGreek {
-   public static void main (String [] args) {
+public class LabProgram {
+   public static void main(String[] args) {
       Scanner scnr = new Scanner(System.in);
-      char origLetter;
+      int numStrokes;
+      int isPar;
 
-      origLetter = scnr.next().charAt(0);
+      isPar = scnr.nextInt();
+      numStrokes = scnr.nextInt();
 
-       System.out.println(origLetter);
-       switch (origLetter){
-         case 'A':
-         case 'a':
-            System.out.println("Alpha");
-            break;
-         case 'B':
-         case 'b':
-            System.out.println("Beta");
-            break;
-         default:
-         System.out.println("Unknown");
-            break;
+      if (isPar == 5 || isPar == 4 || isPar == 3){
+         if (numStrokes == isPar - 2){
+            System.out.println("Eagle");
+         } else if (numStrokes == isPar - 1){
+            System.out.println("Birdie");
+         } else if (numStrokes == isPar){
+            System.out.println("Par");  
+         } else if (numStrokes == isPar + 1){
+            System.out.println("Boogie");  
+         } else {
+            System.out.println("Far too many, son");  
+         }
+      } else {
+         System.out.println("Error");
       }
    }
 }
