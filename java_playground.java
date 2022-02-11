@@ -125,25 +125,51 @@
 // }
 
 // 3.16 LAB: Smallest number
+// import java.util.Scanner;
+
+// public class LabProgram {
+//    public static void main(String[] args) {
+//       Scanner scnr = new Scanner(System.in);
+//       int choice1;
+//       int choice2;
+//       int choice3;
+
+//       choice1 = scnr.nextInt();
+//       choice2 = scnr.nextInt();
+//       choice3 = scnr.nextInt();
+
+//       if ((choice1 < choice2) && (choice1 < choice2)){
+//          System.out.println(choice1);
+//       } else if ((choice2 < choice1) && (choice2 < choice3)){
+//          System.out.println(choice2);
+//       } else {
+//          System.out.println(choice3);
+//       }
+//    } 
+// }
+
 import java.util.Scanner;
 
-public class LabProgram {
-   public static void main(String[] args) {
+public class ConvertToGreek {
+   public static void main (String [] args) {
       Scanner scnr = new Scanner(System.in);
-      int choice1;
-      int choice2;
-      int choice3;
+      char origLetter;
 
-      choice1 = scnr.nextInt();
-      choice2 = scnr.nextInt();
-      choice3 = scnr.nextInt();
+      origLetter = scnr.next().charAt(0);
 
-      if ((choice1 < choice2) && (choice1 < choice2)){
-         System.out.println(choice1);
-      } else if ((choice2 < choice1) && (choice2 < choice3)){
-         System.out.println(choice2);
-      } else {
-         System.out.println(choice3);
+       System.out.println(origLetter);
+       switch (origLetter){
+         case 'A':
+         case 'a':
+            System.out.println("Alpha");
+            break;
+         case 'B':
+         case 'b':
+            System.out.println("Beta");
+            break;
+         default:
+         System.out.println("Unknown");
+            break;
       }
-   } 
+   }
 }
